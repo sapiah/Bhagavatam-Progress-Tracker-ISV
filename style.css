@@ -59,3 +59,138 @@ h1 {
     height: 80px;
     border: none
 }
+.feet-6 {
+    position: absolute;
+    transform: rotate(110deg);
+    top: 160px;
+    left: 260px;
+    width: 80px; 
+    height: 80px;
+    border: none
+}
+.feet-7 {
+    position: absolute;
+    transform: rotate(120deg);
+    top: 100px;
+    left: 330px;
+    width: 80px; 
+    height: 80px;
+    border: none
+}
+.feet-8 {
+    position: absolute;
+    transform: rotate(125deg);
+    top: 60px;
+    left: 400px;
+    width: 80px; 
+    height: 80px;
+    border: none
+}
+.feet-9 {
+    position: absolute;
+    transform: rotate(125deg);
+    top: 30px;
+    left: 490px;
+    width: 80px; 
+    height: 80px;
+    border: none
+}
+.feet-10 {
+    position: absolute;
+    transform: rotate(145deg);
+    top: 8px;
+    left: 700px;
+    width: 80px; 
+    height: 80px;
+    border: none
+}
+.feet-11 {
+    position: absolute;
+    transform: rotate(155deg);
+    top: 3px;
+    left: 840px;
+    width: 80px; 
+    height: 80px;
+    border: none
+}
+.feet-12 {
+    position: absolute;
+    transform: rotate(175deg);
+    top: 40px;
+    right: 450px;
+    width: 80px; 
+    height: 80px;
+    border: none
+}
+.feet-13 {
+    position: absolute;
+    transform: rotate(180deg);
+    top: 95px;
+    right: 350px;
+    width: 80px; 
+    height: 80px;
+    border: none
+}
+.feet-14 {
+    position: absolute;
+    transform: rotate(200deg);
+    top: 150px;
+    right: 280px;
+    width: 80px; 
+    height: 80px;
+    border: none
+}
+.feet-15 {
+    position: absolute;
+    transform: rotate(220deg);
+    top: 220px;
+    right: 235px;
+    width: 80px; 
+    height: 80px;
+    border: none
+}
+.feet-16 {
+    position: absolute;
+    transform: rotate(280deg);
+    top: 350px;
+    right: 235px;
+    width: 80px; 
+    height: 80px;
+    border: none
+}
+.feet-17 {
+    position: absolute;
+    transform: rotate(300deg);
+    top: 400px;
+    right: 300px;
+    width: 80px; 
+    height: 80px;
+    border: none
+}
+.feet-18 {
+    position: absolute;
+    transform: rotate(320deg);
+    top: 500px;
+    right: 420px;
+    width: 80px; 
+    height: 80px;
+    border: none
+}
+.feet-19 {
+    position: absolute;
+    transform: rotate(320deg);
+    top: 530px;
+    right: 500px;
+    width: 80px; 
+    height: 80px;
+    border: none
+}
+.feet-20 {
+    position: absolute;
+    transform: rotate(320deg);
+    top: 550px;
+    right: 630px;
+    width: 80px; 
+    height: 80px;
+    border: none
+}
