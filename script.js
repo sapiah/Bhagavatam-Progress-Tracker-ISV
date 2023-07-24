@@ -1,6 +1,8 @@
 
 addUnsteppedImages();
 loopSteppedImages();
+collectNumberOfSetsGSheet();
+
 
 async function loopSteppedImages () {
     const sleep = ms => new Promise(res => setTimeout(res, ms));
@@ -12,6 +14,15 @@ async function loopSteppedImages () {
         await sleep(500);
         img[i].src = "images/Unstepped-feet.png"
     }
+}
+
+function collectNumberOfSetsGSheet(){
+    const spreadsheetId = '1-QuGqQ-7uuObTOeWYQC4sJUfaazX_8rtdODYSOpeepw'
+    const sheetName = 'Tracker';
+
+    //Need to connect with Google Sheets API
+    
+    
 }
 
 
