@@ -1,7 +1,30 @@
 
 addUnsteppedImages();
 loopSteppedImages();
-collectNumberOfSetsGSheet();
+
+async function collectNumberOfSetsGSheet(){
+    const baseUrl = "https://script.google.com/macros/s/AKfycbyibJ2op23RnKqRlTa1elAVBncd1HZgRXfIBd-GSADKxj9iTXHxQPCHXCLBMorMOR9U/exec";  // Google Web App URL
+    const para = {
+    spreadsheetId: "1-QuGqQ-7uuObTOeWYQC4sJUfaazX_8rtdODYSOpeepw", // Google Spreadsheet ID.
+    sheetName: "Tracker"  // Sheet Name
+    };
+    const q = new URLSearchParams(para);
+    const url = baseUrl + "?" + q;
+    let result = [-1, "", -1]
+    fetch(url)
+    .then(res => res.json())
+    .then(res => {
+        const values = res.values;
+        
+        result[0] = values[1][0];
+        result[1] = values[1][1];
+        result[2] = values[1][2];
+
+        return result
+    });    
+    return result
+}
+      
 
 
 async function loopSteppedImages () {
@@ -9,22 +32,35 @@ async function loopSteppedImages () {
     const img = document.querySelectorAll("img");
     const loopMax = 20;
 
+    let numberOfSets = 0;
+    let i = 0
+    
+
+    while(i < 1) {
+
+        // (async () => {
+        //     var sheetValues =  await collectNumberOfSetsGSheet() 
+        //     await sleep(1000)
+        //     console.log(sheetValues)
+        //  })()
+        
+        const sheetValues =  await collectNumberOfSetsGSheet()
+        await sleep(500)
+        console.log(sheetValues)
+
+        i++
+    } 
+
+    
     for (let i = 1; i <= loopMax; i++) {
         img[i].src = "images/Stepped-feet.png"
-        await sleep(500);
+        // await sleep(500);
         img[i].src = "images/Unstepped-feet.png"
     }
 }
 
-function collectNumberOfSetsGSheet(){
-    const spreadsheetId = '1-QuGqQ-7uuObTOeWYQC4sJUfaazX_8rtdODYSOpeepw'
-    const sheetName = 'Tracker';
 
-    //Need to connect with Google Sheets API
-    
-    
-}
-
+        
 
 function addUnsteppedImages() {
     const img = document.querySelectorAll("img"); 
