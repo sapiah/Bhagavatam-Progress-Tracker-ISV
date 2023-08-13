@@ -2,6 +2,14 @@
 addUnsteppedImages();
 loopSteppedImages();
 
+/*
+Collects 3 values from the Googel Spreadsheet by making a HTTP request and then parshing the JSON.
+
+DATA
+values[1][0]: Total Sets sponsonsored
+values[1][1]: Last Name
+values[1][2]: Last No. Sponsored Sets
+*/
 async function collectNumberOfSetsGSheet(){
     const baseUrl = "https://script.google.com/macros/s/AKfycbyibJ2op23RnKqRlTa1elAVBncd1HZgRXfIBd-GSADKxj9iTXHxQPCHXCLBMorMOR9U/exec";  // Google Web App URL
     const para = {
@@ -29,44 +37,74 @@ async function collectNumberOfSetsGSheet(){
 
 async function loopSteppedImages () {
     const sleep = ms => new Promise(res => setTimeout(res, ms));
-    const img = document.querySelectorAll("img");
-    const loopMax = 20;
-
+    
     let numberOfSets = 0;
+    let lastName = ""
+    let lastSet = 0;
     let i = 0
     
-
     while(i < 1) {
 
         // (async () => {
         //     var sheetValues =  await collectNumberOfSetsGSheet() 
-        //     await sleep(1000)
-        //     console.log(sheetValues)
+        //     // await sleep(1000)            
+        //     console.log(sheetValues)           
         //  })()
         
+        /* Issue 2: Since I'm receving data from an Async function, I'm don't get the data immediately. I think I need to use a promise 
+         function to collect the data, but may be I'm doing it wrong. 
+         sheetValues should be an array from the Async function, containing 3 elements 
+            sheetValues[0]: Total Sets sponsonsored
+            sheetValues[1]: Last Name
+            sheetValues[2]: Last No. Sponsored Sets
+            The method collectNumberOfSetsGSheet needs to be called frequtly to get the most recent updates
+        */
         const sheetValues =  await collectNumberOfSetsGSheet()
-        await sleep(500)
         console.log(sheetValues)
+
+        numberOfSets = sheetValues[0]
+        lastName = sheetValues[1]
+        lastSet = sheetValues[2]
 
         i++
     } 
 
-    
-    for (let i = 1; i <= loopMax; i++) {
-        img[i].src = "images/Stepped-feet.png"
-        // await sleep(500);
-        img[i].src = "images/Unstepped-feet.png"
+
+    // Updating the feet images sequentially as numberOfSets is updated. Each feet equates to 150 sets
+    const img = document.querySelectorAll("img");
+    const goalSets = 3000;
+    const setsPerFeet = 150;
+
+    const numSteppedFeets = Math.floor(numberOfSets/setsPerFeet)
+
+    if(numSteppedFeets > 0){
+        for (let i = 1; i <= numSteppedFeets; i++) {
+                img[i].src = "images/Stepped-feet.png"
+        }
     }
+
+
+    // // TEMP: Used for iterating through the the unstepped feets.
+    // const img = document.querySelectorAll("img");
+    // const loopMax = 20; 
+    // for (let i = 1; i <= loopMax; i++) {
+    //     img[i].src = "images/Stepped-feet.png"
+    //     await sleep(500);
+    //     img[i].src = "images/Unstepped-feet.png"
+    // }
 }
 
 
         
-
+// Loading the unstepped images
 function addUnsteppedImages() {
     const img = document.querySelectorAll("img"); 
 
+    // Govardgan Image 
     img[0].src = "images/govardhanTracker.jpg";
     img[0].className="center-fit"
+
+    // Feet 1 - 20 Images
 
     img[1].src = "images/Unstepped-feet.png"
     img[1].className="feet-1"

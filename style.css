@@ -1,7 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-    /* background-color: #91edb4; */
 }
 h1 {
     text-align: center;
@@ -11,12 +10,20 @@ h1 {
     display: grid;
     height: 100%;
 }
+/* Bigger Govardhan image class */
 .center-fit {
     max-width: 100%;
     max-height: 90vh;
     border:none;
     margin: auto;
 }
+
+/* 
+    Hard coding feet position around the image 
+    Issue 1 : Need to make this relative to the bigger image.  When I open the window on a bigger screen, 
+    the feet images move around as it isn't relative to the Govardhan image.
+
+ */
 .feet-1 {
     position: relative;
     bottom: 90px;
