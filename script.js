@@ -38,33 +38,29 @@ async function loopSteppedImages () {
     let numberOfSets = 0;
     let lastName = ""
     let lastSet = 0;
-    let i = 0
     
-    while(i < 1) {
+    while(true) {
         const sheetValues =  await collectNumberOfSetsGSheet()
         
         numberOfSets = sheetValues[0]
         lastName = sheetValues[1]
         lastSet = sheetValues[2]
 
+        // Updating the feet images sequentially as numberOfSets is updated. Each feet equates to 150 sets
+        const img = document.querySelectorAll("img");
+        const goalSets = 3000;
+        const setsPerFeet = 150;
 
-        i++
-    } 
+        const numSteppedFeets = Math.floor(numberOfSets/setsPerFeet)
 
-
-    // Updating the feet images sequentially as numberOfSets is updated. Each feet equates to 150 sets
-    const img = document.querySelectorAll("img");
-    const goalSets = 3000;
-    const setsPerFeet = 150;
-
-    const numSteppedFeets = Math.floor(numberOfSets/setsPerFeet)
-
-    if(numSteppedFeets > 0){
-        for (let i = 1; i <= numSteppedFeets; i++) {
-                img[i].src = "images/Stepped-feet.png"
+        if(numSteppedFeets > 0){
+            for (let i = 1; i <= numSteppedFeets; i++) {
+                    img[i].src = "images/Stepped-feet.png"
+            }
         }
-    }
 
+        sleep(500)
+    } 
 
     // // TEMP: Used for iterating through the the unstepped feets.
     // const img = document.querySelectorAll("img");
