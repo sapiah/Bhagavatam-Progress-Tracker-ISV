@@ -41,11 +41,12 @@ async function loopSteppedImages () {
 
     const img = document.querySelectorAll("img");
     const loopMax = 20; 
-    // for (let i = 1; i <= loopMax; i++) {
-    //     img[i].src = "images/Stepped-feet.png"
-    //     await sleep(500);
-    //     img[i].src = "images/Unstepped-feet.png"
-    // }
+
+    for (let i = 1; i <= loopMax; i++) {
+        img[i].src = "images/Stepped-feet.png"
+        await sleep(500);
+        img[i].src = "images/Unstepped-feet.png"
+    }
     
     while(true) {
         const sheetValues =  await collectNumberOfSetsGSheet()
@@ -69,9 +70,12 @@ async function loopSteppedImages () {
         
         const t1 = `${lastName} - ${lastSet} Sets`
         const t2 = `Total of ${numberOfSets} Sets of Srimad-Bhagavatam Sponsored!`;
-        
-        document.getElementById("txt1").innerHTML = t1;
-        document.getElementById("txt2").innerHTML = t2;
+   
+
+        if(t1 != null && t2 != null){
+            document.getElementById("txt1").textContent  = t1;
+            document.getElementById("txt2").textContent  = t2;
+        }
 
         sleep(500)
     } 

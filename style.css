@@ -9,10 +9,13 @@ h1 {
     position: relative;
     display: grid;
     height: 100%;
+    margin-left: 17%;
+    margin-right: 17%;
+    justify-content: center;
+    background-color: aqua
 }
 /* Bigger Govardhan image class */
-.center-fit {
-    position: relative;
+#govardhanImg {
     max-width: 100%;
     max-height: 90vh;
     border:none;
@@ -22,7 +25,7 @@ h1 {
 .text-block-1 {
     position: absolute;
     bottom: 49%;
-    right: 43%;   
+    right: 38%;   
     font-size: 3.2vmin ;
     text-align: center;
     color: #fefff8;
@@ -31,23 +34,16 @@ h1 {
 .text-block-2 {
     position: absolute;
     bottom: 41%;
-    right: 37%;
+    right: 30%;
     max-height: 100%;
     font-size: 3.2vax ;   
     text-align: center;
     color: #fefff8;    
     font-family: Georgia;
 }
-
-/* 
-    Hard coding feet position around the image 
-    Issue 1 : Need to make this relative to the bigger image.  When I open the window on a bigger screen, 
-    the feet images move around as it isn't relative to the Govardhan image.
-
- */
 .feet-1 {
     position: absolute;
-    bottom: 6%;
+    bottom: 2%;
     right: 53%;
     width: 80px; 
     height: 80px;
@@ -55,16 +51,16 @@ h1 {
  }
 .feet-2 {
     position: absolute;
-    bottom: 8%;
-    left: 35%;
+    bottom: 4%;
+    left: 30%;
     width: 80px; 
     height: 80px;
     border: none
 }
 .feet-3 {
     position: absolute;
-    bottom: 15%;
-    left: 25%;
+    bottom: 10%;
+    left: 20%;
     width: 80px; 
     height: 80px;
     border: none
@@ -72,8 +68,8 @@ h1 {
 .feet-4 {
     position: absolute;    
     transform: rotate(10deg);
-    bottom: 22%;
-    left: 20%;
+    bottom: 17%;
+    left: 8%;
     width: 80px; 
     height: 80px;
     border: none
@@ -81,8 +77,8 @@ h1 {
 .feet-5 {
     position: absolute;
     transform: rotate(20deg);
-    bottom: 32%;
-    left: 17%;
+    bottom: 30%;
+    left: 2%;
     width: 80px; 
     height: 80px;
     border: none
@@ -91,7 +87,7 @@ h1 {
     position: absolute;
     transform: rotate(110deg);
     top: 26%;
-    left: 18%;
+    left: 1%;
     width: 80px; 
     height: 80px;
     border: none
@@ -99,8 +95,8 @@ h1 {
 .feet-7 {
     position: absolute;
     transform: rotate(120deg);
-    top: 17%;
-    left: 24%;
+    top: 13%;
+    left: 10%;
     width: 80px; 
     height: 80px;
     border: none
@@ -108,8 +104,8 @@ h1 {
 .feet-8 {
     position: absolute;
     transform: rotate(125deg);
-    top: 10%;
-    left: 30%;
+    top: 5%;
+    left: 20%;
     width: 80px; 
     height: 80px;
     border: none
@@ -117,7 +113,7 @@ h1 {
 .feet-9 {
     position: absolute;
     transform: rotate(145deg);
-    top: 6%;
+    top: 1%;
     left: 46%;
     width: 70px; 
     height: 80px;
@@ -126,8 +122,8 @@ h1 {
 .feet-10 {
     position: absolute;
     transform: rotate(155deg);
-    top: 6%;
-    left: 56%;
+    top: 1%;
+    left: 58%;
     width: 80px; 
     height: 80px;
     border: none
@@ -135,8 +131,8 @@ h1 {
 .feet-11 {
     position: absolute;
     transform: rotate(165deg);
-    top: 11%;
-    right: 30%;
+    top: 5%;
+    right: 25%;
     width: 80px; 
     height: 80px;
     border: none
@@ -144,8 +140,8 @@ h1 {
 .feet-12 {
     position: absolute;
     transform: rotate(190deg);
-    top: 17%;
-    right: 24%;
+    top: 10%;
+    right: 13%;
     width: 80px; 
     height: 80px;
     border: none
@@ -153,17 +149,17 @@ h1 {
 .feet-13 {
     position: absolute;
     transform: rotate(190deg);
-    top: 25%;
-    right: 20%;
+    top: 18%;
+    right: 6%;
     width: 80px; 
     height: 80px;
     border: none
 }
 .feet-14 {
     position: absolute;
-    transform: rotate(195deg);
-    top: 33%;
-    right: 17%;
+    transform: rotate(200deg);
+    top: 30%;
+    right: 1%;
     width: 80px; 
     height: 80px;
     border: none
@@ -172,7 +168,7 @@ h1 {
     position: absolute;
     transform: rotate(290deg);
     bottom: 37%;
-    right: 16%;
+    right: 1%;
     width: 80px; 
     height: 80px;
     border: none
@@ -181,7 +177,7 @@ h1 {
     position: absolute;
     transform: rotate(290deg);
     bottom: 27%;
-    right: 20%;
+    right: 5%;
     width: 80px; 
     height: 80px;
     border: none
@@ -190,7 +186,7 @@ h1 {
     position: absolute;
     transform: rotate(300deg);
     bottom: 15%;
-    right: 27%;
+    right: 14%;
     width: 80px; 
     height: 80px;
     border: none
@@ -198,8 +194,8 @@ h1 {
 .feet-18 {
     position: absolute;
     transform: rotate(320deg);
-    bottom: 10%;
-    right: 33%;
+    bottom: 7%;
+    right: 23%;
     width: 80px; 
     height: 80px;
     border: none
@@ -207,8 +203,8 @@ h1 {
 .feet-19 {
     position: absolute;
     transform: rotate(330deg);
-    bottom: 7%;
-    right: 40%;
+    bottom: 3%;
+    right: 35%;
     width: 80px; 
     height: 80px;
     border: none
@@ -216,8 +212,8 @@ h1 {
 .feet-20 {
     position: absolute;
     transform: rotate(340deg);
-    bottom: 5%;
-    right: 46%;
+    bottom: 2%;
+    right: 43%;
     width: 80px; 
     height: 80px;
     border: none
