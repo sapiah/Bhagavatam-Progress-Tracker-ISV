@@ -38,6 +38,14 @@ async function loopSteppedImages () {
     let numberOfSets = 0;
     let lastName = ""
     let lastSet = 0;
+
+    const img = document.querySelectorAll("img");
+    const loopMax = 20; 
+    for (let i = 1; i <= loopMax; i++) {
+        img[i].src = "images/Stepped-feet.png"
+        await sleep(500);
+        img[i].src = "images/Unstepped-feet.png"
+    }
     
     while(true) {
         const sheetValues =  await collectNumberOfSetsGSheet()
@@ -59,17 +67,12 @@ async function loopSteppedImages () {
             }
         }
 
+        const t1 = `${numberOfSets} Sets of Srimad-Bhagavatam`;
+        const t2 = `${lastName} - ${lastSet}`
+
         sleep(500)
     } 
-
-    // // TEMP: Used for iterating through the the unstepped feets.
-    // const img = document.querySelectorAll("img");
-    // const loopMax = 20; 
-    // for (let i = 1; i <= loopMax; i++) {
-    //     img[i].src = "images/Stepped-feet.png"
-    //     await sleep(500);
-    //     img[i].src = "images/Unstepped-feet.png"
-    // }
+    
 }
 
 
@@ -80,7 +83,6 @@ function addUnsteppedImages() {
 
     // Govardgan Image 
     img[0].src = "images/govardhanTracker.jpg";
-    img[0].className="center-fit"
 
     // Feet 1 - 20 Images
 

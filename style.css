@@ -6,12 +6,12 @@ h1 {
     text-align: center;
 }
 .imgbox {
-    position: relative;
     display: grid;
     height: 100%;
 }
 /* Bigger Govardhan image class */
 .center-fit {
+    position: relative;
     max-width: 100%;
     max-height: 90vh;
     border:none;
@@ -25,25 +25,25 @@ h1 {
 
  */
 .feet-1 {
-    position: relative;
-    bottom: 90px;
-    left: 680px;
+    position: absolute;
+    bottom: 6%;
+    right: 53%;
     width: 80px; 
     height: 80px;
     border: none
-}
+ }
 .feet-2 {
     position: absolute;
-    bottom: 100px;
-    left: 550px;
+    bottom: 8%;
+    left: 35%;
     width: 80px; 
     height: 80px;
     border: none
 }
 .feet-3 {
     position: absolute;
-    bottom: 160px;
-    left: 390px;
+    bottom: 15%;
+    left: 25%;
     width: 80px; 
     height: 80px;
     border: none
@@ -51,8 +51,8 @@ h1 {
 .feet-4 {
     position: absolute;    
     transform: rotate(10deg);
-    bottom: 200px;
-    left: 310px;
+    bottom: 22%;
+    left: 20%;
     width: 80px; 
     height: 80px;
     border: none
@@ -60,8 +60,8 @@ h1 {
 .feet-5 {
     position: absolute;
     transform: rotate(20deg);
-    bottom: 280px;
-    left: 260px;
+    bottom: 32%;
+    left: 17%;
     width: 80px; 
     height: 80px;
     border: none
@@ -69,8 +69,8 @@ h1 {
 .feet-6 {
     position: absolute;
     transform: rotate(110deg);
-    top: 160px;
-    left: 260px;
+    top: 26%;
+    left: 18%;
     width: 80px; 
     height: 80px;
     border: none
@@ -78,8 +78,8 @@ h1 {
 .feet-7 {
     position: absolute;
     transform: rotate(120deg);
-    top: 100px;
-    left: 330px;
+    top: 17%;
+    left: 24%;
     width: 80px; 
     height: 80px;
     border: none
@@ -87,80 +87,80 @@ h1 {
 .feet-8 {
     position: absolute;
     transform: rotate(125deg);
-    top: 60px;
-    left: 400px;
+    top: 10%;
+    left: 30%;
     width: 80px; 
     height: 80px;
     border: none
 }
 .feet-9 {
     position: absolute;
-    transform: rotate(125deg);
-    top: 30px;
-    left: 490px;
-    width: 80px; 
+    transform: rotate(145deg);
+    top: 6%;
+    left: 46%;
+    width: 70px; 
     height: 80px;
     border: none
 }
 .feet-10 {
     position: absolute;
-    transform: rotate(145deg);
-    top: 8px;
-    left: 700px;
+    transform: rotate(155deg);
+    top: 6%;
+    left: 56%;
     width: 80px; 
     height: 80px;
     border: none
 }
 .feet-11 {
     position: absolute;
-    transform: rotate(155deg);
-    top: 3px;
-    left: 840px;
+    transform: rotate(165deg);
+    top: 11%;
+    right: 30%;
     width: 80px; 
     height: 80px;
     border: none
 }
 .feet-12 {
     position: absolute;
-    transform: rotate(175deg);
-    top: 40px;
-    right: 450px;
+    transform: rotate(190deg);
+    top: 17%;
+    right: 24%;
     width: 80px; 
     height: 80px;
     border: none
 }
 .feet-13 {
     position: absolute;
-    transform: rotate(180deg);
-    top: 95px;
-    right: 350px;
+    transform: rotate(190deg);
+    top: 25%;
+    right: 20%;
     width: 80px; 
     height: 80px;
     border: none
 }
 .feet-14 {
     position: absolute;
-    transform: rotate(200deg);
-    top: 150px;
-    right: 280px;
+    transform: rotate(195deg);
+    top: 33%;
+    right: 17%;
     width: 80px; 
     height: 80px;
     border: none
-}
+} 
 .feet-15 {
     position: absolute;
-    transform: rotate(220deg);
-    top: 220px;
-    right: 235px;
+    transform: rotate(290deg);
+    bottom: 37%;
+    right: 16%;
     width: 80px; 
     height: 80px;
     border: none
 }
 .feet-16 {
     position: absolute;
-    transform: rotate(280deg);
-    top: 350px;
-    right: 235px;
+    transform: rotate(290deg);
+    bottom: 27%;
+    right: 20%;
     width: 80px; 
     height: 80px;
     border: none
@@ -168,8 +168,8 @@ h1 {
 .feet-17 {
     position: absolute;
     transform: rotate(300deg);
-    top: 400px;
-    right: 300px;
+    bottom: 15%;
+    right: 27%;
     width: 80px; 
     height: 80px;
     border: none
@@ -177,26 +177,26 @@ h1 {
 .feet-18 {
     position: absolute;
     transform: rotate(320deg);
-    top: 500px;
-    right: 420px;
+    bottom: 10%;
+    right: 33%;
     width: 80px; 
     height: 80px;
     border: none
 }
 .feet-19 {
     position: absolute;
-    transform: rotate(320deg);
-    top: 530px;
-    right: 500px;
+    transform: rotate(330deg);
+    bottom: 7%;
+    right: 40%;
     width: 80px; 
     height: 80px;
     border: none
 }
 .feet-20 {
     position: absolute;
-    transform: rotate(320deg);
-    top: 550px;
-    right: 630px;
+    transform: rotate(340deg);
+    bottom: 5%;
+    right: 46%;
     width: 80px; 
     height: 80px;
     border: none
