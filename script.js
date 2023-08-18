@@ -10,6 +10,7 @@ values[1][0]: Total Sets sponsonsored
 values[1][1]: Last Name
 values[1][2]: Last No. Sponsored Sets
 */
+
 async function collectNumberOfSetsGSheet(){
     const baseUrl = "https://script.google.com/macros/s/AKfycbyibJ2op23RnKqRlTa1elAVBncd1HZgRXfIBd-GSADKxj9iTXHxQPCHXCLBMorMOR9U/exec";  // Google Web App URL
     const para = {
@@ -19,20 +20,16 @@ async function collectNumberOfSetsGSheet(){
     const q = new URLSearchParams(para);
     const url = baseUrl + "?" + q;
     let result = [-1, "", -1]
-    fetch(url)
-    .then(res => res.json())
-    .then(res => {
-        const values = res.values;
-        
-        result[0] = values[1][0];
-        result[1] = values[1][1];
-        result[2] = values[1][2];
+    let response = await fetch(url)
+    let data = await response.json()
+    const values = data.values;
+    
+    result[0] = values[1][0];
+    result[1] = values[1][1];
+    result[2] = values[1][2];
 
-        return result
-    });    
-    return result
-}
-      
+    return result
+}   
 
 
 async function loopSteppedImages () {
@@ -44,27 +41,12 @@ async function loopSteppedImages () {
     let i = 0
     
     while(i < 1) {
-
-        // (async () => {
-        //     var sheetValues =  await collectNumberOfSetsGSheet() 
-        //     // await sleep(1000)            
-        //     console.log(sheetValues)           
-        //  })()
-        
-        /* Issue 2: Since I'm receving data from an Async function, I'm don't get the data immediately. I think I need to use a promise 
-         function to collect the data, but may be I'm doing it wrong. 
-         sheetValues should be an array from the Async function, containing 3 elements 
-            sheetValues[0]: Total Sets sponsonsored
-            sheetValues[1]: Last Name
-            sheetValues[2]: Last No. Sponsored Sets
-            The method collectNumberOfSetsGSheet needs to be called frequtly to get the most recent updates
-        */
         const sheetValues =  await collectNumberOfSetsGSheet()
-        console.log(sheetValues)
-
+        
         numberOfSets = sheetValues[0]
         lastName = sheetValues[1]
         lastSet = sheetValues[2]
+
 
         i++
     } 
