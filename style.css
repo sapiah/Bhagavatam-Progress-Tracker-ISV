@@ -5,7 +5,8 @@
 h1 {
     text-align: center;
 }
-.imgbox {
+.container {        
+    position: relative;
     display: grid;
     height: 100%;
 }
@@ -16,6 +17,26 @@ h1 {
     max-height: 90vh;
     border:none;
     margin: auto;
+}
+
+.text-block-1 {
+    position: absolute;
+    bottom: 49%;
+    right: 43%;   
+    font-size: 3.2vmin ;
+    text-align: center;
+    color: #fefff8;
+    font-family: Georgia;
+}
+.text-block-2 {
+    position: absolute;
+    bottom: 41%;
+    right: 37%;
+    max-height: 100%;
+    font-size: 3.2vax ;   
+    text-align: center;
+    color: #fefff8;    
+    font-family: Georgia;
 }
 
 /* 
